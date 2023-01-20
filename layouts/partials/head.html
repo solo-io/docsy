@@ -41,6 +41,11 @@
 <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}"/>
 {{ end -}}
 
+{{ if (findRE "<pre" .Content 1) }}
+  {{ $copyCss := resources.Get "css/copy-code-button.css" | minify }}
+  <link href="{{ $copyCss.RelPermalink }}" rel="stylesheet">
+{{ end }}
+
 {{ partial "hooks/head-end.html" . -}}
 
 {{/* To comply with GDPR, cookie consent scripts places in head-end must execute before Google Analytics is enabled */ -}}
