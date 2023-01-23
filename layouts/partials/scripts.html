@@ -100,10 +100,4 @@ window.markmap = {
 {{ end -}}
 
 <script src='{{ "js/tabpane-persist.js" | relURL }}'></script>
-
-{{ if (findRE "<pre" .Content 1) }}
-  {{ $jsCopy := resources.Get "js/copy-code-button.js" | minify }}
-  <script src="{{ $jsCopy.RelPermalink }}"></script>
-{{ end }}
-
 {{ partial "hooks/body-end.html" . -}}
