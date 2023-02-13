@@ -16,13 +16,13 @@ If you don't want a logo to appear in the navbar, then set `navbar_logo` to
 
 {{< tabpane persistLang=false >}}
 {{< tab header="Configuration file:" disabled=true />}}
-{{< tab header="hugo.toml" lang="toml" >}}
+{{< tab header="config.toml" lang="toml" >}}
 navbar_logo = false
 {{< /tab >}}
-{{< tab header="hugo.yaml" lang="yaml" >}}
+{{< tab header="config.yaml" lang="yaml" >}}
 navbar_logo: false
 {{< /tab >}}
-{{< tab header="hugo.json" lang="json" >}}
+{{< tab header="config.json" lang="json" >}}
 {
   "navbar_logo": false
 }
